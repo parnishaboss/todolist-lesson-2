@@ -14,6 +14,13 @@ const App = () => {
     let [filter, setFilter] = useState<FilterFaluesType>("all")
     let removeTask = (id:number) => {
         let filteredTasks = tasks.filter(t => t.id !== id)
+        // let filteredTasks = tasks.filter ( (t) => {
+        //     if (t.id !== id) {
+        //         return true;
+        //     } else {
+        //         return false
+        //     }
+        // })
         setTasks(filteredTasks)
     }
     let changeFilter = (value:FilterFaluesType) => {
